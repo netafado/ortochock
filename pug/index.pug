@@ -1,0 +1,65 @@
+extends ./_layouts/lipo.pug
+
+block append CSS
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css")
+    link(rel="stylesheet", href="css/style.css")
+    
+
+block content
+    section#banners.relative
+        .container-fluid#banner-container
+            .row
+                #banner   
+                    // Banners rotativos                
+                    include ./_partials/_index/_banners.pug
+
+    // esteticiscas carrocel
+    section.bg-main.section#resultados
+        include ./_partials/_index/_esteticistas.pug
+
+
+
+    // conheça mais sobre o tratamento
+    section#curso.section
+        include ./_partials/_index/_curso.pug
+
+        // conteudo programatico
+        //include ./_partials/_index/_programa.pug
+
+    // inscrição
+    //section#inscricao.section
+        include ./_partials/_index/_inscricao.pug
+
+    // ministrante
+    section#cuidadora.section
+        include ./_partials/_index/_prof.pug
+        
+    //agenda
+    section#agenda.bg-main-texto.section
+        include ./_partials/_index/_agenda.pug
+
+    // Midia
+    //section#na-midia
+        include ./_partials/_index/_midia.pug
+
+    // depoimentos 
+    section#depoimentos.section.back-acoes(style="background-color:#f4f8f9")
+        include ./_partials/_index/_depoimentos.pug
+
+    
+    // organizadores
+    section#organizadores.section
+        include ./_partials/_index/_organizadores.pug
+
+    // outros cursos
+    section#outrosCursos.section
+        include ./_partials/_index/_outrosCurso.pug
+
+
+
+block append scriptsJS
+    script(src="js/app.js")
+    script(src="js/youtube.js")
+
+

@@ -1,0 +1,188 @@
+block settings
+    - var title = 'ORTOSHOCK®'
+doctype
+html(lang="pt")
+    head
+        include ../_partials/meta-tags
+        include ../_partials/icons
+        title #{title}
+        block CSS
+            link(rel="stylesheet", href="css/plugins.css")
+            link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.0/slick.min.css")
+            link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.0/slick-theme.min.css")
+            
+
+    body
+
+        include ../_partials/_index/face.pug
+        #agemdaPop
+            .blackPop
+                .popUp.clearfix
+                    img.img-responsive.block-center(src="img/agenda-placa.png", alt="")  
+                    .flex-popUp  
+                        .popUpItem
+                            .agenda-item
+                                p.data 05/05/2018
+                                p.cidade Rio de Janeiro/RJ
+                       
+                        .popUpItem
+                            .agenda-item
+                                p.data 08/05/2018
+                                p.cidade Marilia/SP
+
+                        .popUpItem
+                            .agenda-item
+                                p.data 12/05/2018
+                                p.cidade Londrina/PR
+
+                        .popUpItem
+                            .agenda-item
+                                p.data 18/05/2018
+                                p.cidade João Pessoa/PB
+
+                        .popUpItem
+                            .agenda-item
+                                p.data 19/05/2018
+                                p.cidade Recife/PE
+
+                        .popUpItem
+                            .agenda-item
+                                p.data 23/05/2018
+                                p.cidade Vitória da Conquista/BA
+
+                        .popUpItem
+                            .agenda-item
+                                p.data 26/05/2018
+                                p.cidade Teresina/PI
+
+                        .popUpItem
+                            .agenda-item
+                                p.data 29/05/2018
+                                p.cidade Brasília/DF
+
+                    p.infos INFORMAÇÕES E INSCRIÇÕES:
+                    p.infos Concept Cursos 71 3051-1317
+                    p.infos ComTato Capacitação 27 2142-5017  
+
+
+
+
+                    .fechar-agenda
+                        img.img-responsive.block-center(src="img/fechar-agenda.png", alt="")
+        #loader
+            img.loader-img.img-responsive(src="https://s3-sa-east-1.amazonaws.com/happybiz-web/BOTHANICA+MINERAL/lipoEscultura/loader.png", alt="Lodder")
+        .ir-topo#ir-topo(style="display:none")
+            a#ir-topos(href="#banners", class="goesTo link-topo")
+                img(class="seta",src="https://s3-sa-east-1.amazonaws.com/happybiz-web/BOTHANICA+MINERAL/striort/seta.png", alt="")
+        // menu-nobile
+        .menu-mob-flutuante#menu-mob-flutuante.img-back-leort(style="display:none;")
+            ul.display-menu-mob
+                li 
+                    a(class="link-topo",href="#inscricao", class="goesTo") INSCRIÇÃO
+                li 
+                    a(class="link-topo",href="#agenda", class="goesTo") AGENDA
+                li 
+                    a(class="link-topo",href="#resultados", class="goesTo") Resultados
+                li 
+                    a(class="link-topo goesTo",href="#curso", class="goesTo" ) LIPOESCULTURA GESSADA®
+                //li 
+                    a(class="link-topo",href="#prof",class="goesTo"  ) MIDIA
+                li 
+                    a(class="link-topo",href="#depoimentos", class="goesTo" ) Depoimentos
+                li 
+                    a(class="link-topo",href="#cuidadora", class="goesTo" ) Educadora
+            .fechar-menu
+                img(src="img/fechar.png", alt="Botão Fechar")
+
+        // Header navegação
+        header#topo
+            .container#cabeca
+                .row.center-vertical
+                    .logo-leort.col-xs-6.col-xs-push-3.col-md-2.col-md-push-0
+                        a(href="https://www.bothanicamineral.com.br/" target="_blank")
+                            img.logo(src="img/Logo-lipoescultura.svg", alt="Logo Bothanica Mineral")
+                    .menu-leort.col-xs-3.col-xs-pull-6.col-md-8.col-md-pull-0
+                        // Navegação para desk
+                        nav.visible-md.visible-lg
+                            ul.display-menu
+                                li 
+                                    a(class="link-topo",href="#inscricao", class="goesTo") INSCRIÇÃO
+                                li 
+                                    a(class="link-topo",href="#agenda", class="goesTo") AGENDA
+                                li 
+                                    a(class="link-topo",href="#resultados", class="goesTo") Resultados
+                                li 
+                                    a(class="link-topo",href="#curso",  class="goesTo" )  LIPOESCULTURA GESSADA®
+                                //li 
+                                    a(class="link-topo",href="#na-midia", class="goesTo") MIDIA
+                                li 
+                                    a(class="link-topo",href="#depoimentos", class="goesTo" ) Depoimentos
+                                li 
+                                    a(class="link-topo",href="#cuidadora", class="goesTo" ) Educadora
+                        // Navegação para mob
+                        nav.visible-xs.visible-sm
+                                .menu-mob
+                                    span.icon-bar
+                                    span.icon-bar  
+                                    span.icon-bar                   
+
+
+                    .rede-sociais.col-xs-3.col-md-2
+                        a(href="https://www.instagram.com/bothanicamineral/?hl=pt" target="_blank")
+                            img(src="img/insta.svg", alt="Instagram")
+                        a(href="https://www.facebook.com/Bothanicamineral/" target="_blank")
+                            img(src="img/face.svg", alt="Facebook")
+                        a(href="https://www.youtube.com/channel/UCXt09yqtrEngqUL8KANHuDA" target="_blank")
+                            img(src="img/youtube.svg", alt="Youtube")
+
+            .line-blue
+
+
+
+        block content
+
+
+        block footer   
+            footer.bg-main
+                .container
+                    .col-sm-2
+                        h5.bold Institucional
+                        ul.footer-texto
+                            li 
+                                a(href="http://www.bothanicamineral.com.br/sobre-a-empresa" target="_blank") Sobre a Empresa
+                            li 
+                                a(href="http://www.bothanicamineral.com.br/atendimento-cliente" target="_blank") Fale Conosco
+                    .col-sm-2
+                        h5.bold Sou Profissional
+                        ul.footer-texto
+                            li 
+                                a(href="http://www.bothanicamineral.com.br/beneficios" target="_blank") Benefícios
+                            li 
+                                a(href="http://www.bothanicamineral.com.br/protocolos" target="_blank") Protocolos
+                            li 
+                                a(href="http://www.bothanicamineral.com.br/cursos-bothanica-mineral" target="_blank") Cursos
+
+                    .col-sm-4
+                        h5.bold Bothanica Mineral®
+                        <script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/fb9441ac4db45e38a67788e7bb8c2018.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+
+
+                    .col-sm-4
+                        .footer-texto.logo-footer
+                            a(href="https://www.bothanicamineral.com.br/" target="_blank")
+                                img(src="https://s3-sa-east-1.amazonaws.com/happybiz-web/BOTHANICA+MINERAL/site/logo.png", alt="", srcset="")
+                .container-fluid.logo-biz
+                        a(href="http://www.happybiz.com.br/" target="_blank")
+                            img.logo-biz-img(src="https://s3-sa-east-1.amazonaws.com/happybiz-web/BOTHANICA+MINERAL/site/logo-biz.png", alt="HappyBiz")
+
+                   
+
+
+
+
+        block scriptsJS
+            script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+            script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+            script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js", type="text/javascript")
+
+            
