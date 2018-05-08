@@ -116,18 +116,7 @@
             // instead of a settings object
           ]       
     });
-    $('#banner').slick({
-        dots: true,
-        infinite: true,
-        speed: 1500,
-        fade: true,
-        arrows: false,
-        cssEase: 'linear',
-        focusOnSelect: false,
-        pauseOnFocus: false,
-        autoplay: true,
-        autoplaySpeed: 10000,
-      });
+
 
       $('#galeriaEst').slick({
         dots: true,
