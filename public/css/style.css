@@ -1076,7 +1076,7 @@ header .rede-sociais {
   width: 30px;
 }
 header {
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255,255,255,0.8);
 }
 .arrow {
   top: 34%;
@@ -1584,7 +1584,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left top;
-  background-color: #f3f3f3;
+  background-color: #efeae7;
 }
 .titulo-comentario {
   padding: 50px;
@@ -2091,20 +2091,44 @@ footer .logo-footer {
             transform: rotate(360deg);
   }
 }
-@-webkit-keyframes piscar {
+@-webkit-keyframes rotacaoDevice {
   from {
-    opacity: 1;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    opacity: 0;
   }
   to {
-    opacity: 0.3;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    opacity: 1;
+  }
+}
+@keyframes rotacaoDevice {
+  from {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes piscar {
+  from {
+    color: #204053;
+  }
+  to {
+    color: #abcc68;
   }
 }
 @keyframes piscar {
   from {
-    opacity: 1;
+    color: #204053;
   }
   to {
-    opacity: 0.3;
+    color: #abcc68;
   }
 }
 @-webkit-keyframes scalar {
@@ -2127,7 +2151,8 @@ footer .logo-footer {
             transform: scale(1);
   }
 }
-#loader {
+#loader,
+#device {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2140,7 +2165,10 @@ footer .logo-footer {
       -ms-flex-pack: center;
           justify-content: center;
 }
-#loader .loader-img {
+#loader .loader-img,
+#device .loader-img,
+#loader .device,
+#device .device {
   width: 72px;
   height: 72px;
   -ms-flex-item-align: center;
@@ -2148,6 +2176,40 @@ footer .logo-footer {
       align-self: center;
   -webkit-animation: rotacao 2s infinite;
           animation: rotacao 2s infinite;
+}
+#device {
+  display: none;
+  z-index: 9999999;
+  background-color: #abcc68;
+}
+#device .device {
+  width: 140px;
+  height: 80px;
+  margin: auto;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-animation: none;
+          animation: none;
+}
+#device .device img {
+  margin: auto;
+  -webkit-animation: rotacaoDevice 2s infinite;
+          animation: rotacaoDevice 2s infinite;
+}
+#device .device p {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+}
+@media screen and (max-width: 850px) and (orientation: landscape) {
+  #device {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 @supports (-ms-ime-align: auto) {
   .div-curso-back {
