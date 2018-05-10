@@ -126,8 +126,8 @@
         fade: true,
         arrows: true,
         cssEase: 'linear',
-        prevArrow: '<img src="./img/arrow.png" class="arrow" alt="Esquerda"/>',
-        nextArrow: '<img src="./img/arrow.png" class="arrow arrow-right" alt="Esquerda"/>'
+        prevArrow: '<img src="img/arrow.png" class="arrow" alt="Esquerda"/>',
+        nextArrow: '<img src="img/arrow.png" class="arrow arrow-right" alt="Esquerda"/>'
       });
     
 
@@ -138,8 +138,8 @@
         dotsClass: "estec-docs",
         slidesToShow: 2,
         slidesToScroll: 2,
-        prevArrow: '<img src="./img/arrow.png" class="arrow" alt="Esquerda"/>',
-        nextArrow: '<img src="./img/arrow.png" class="arrow arrow-right" alt="Esquerda"/>',
+        prevArrow: '<img src="img/arrow.png" class="arrow" alt="Esquerda"/>',
+        nextArrow: '<img src="img/arrow.png" class="arrow arrow-right" alt="Esquerda"/>',
         responsive: [
           {
             breakpoint: 1024,
